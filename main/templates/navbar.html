@@ -1,0 +1,17 @@
+{% load static %}
+
+<nav>
+  <a href='/'>
+    <picture>
+      <source srcset='{% static "images/logo-small.svg" %}' media='(max-width: 800px)'>
+      <img src="{% static 'images/logo.svg' %}">
+    </picture>
+  </a>
+  <ul>
+    <li><a href='/'>Home</a></li>
+    <li><a href='/create'>Create</a></li>
+    <li><a href='/register'>Register</a></li>
+    <li><a href='#'>Gonna</a></li>
+    <li><a href='#'>Give</a></li>
+  </ul>
+</nav>

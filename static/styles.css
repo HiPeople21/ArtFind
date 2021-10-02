@@ -1,0 +1,33 @@
+@import 'navbar.css';
+
+* { 
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  background-color: blue;
+}
+
+main {
+  background-image: linear-gradient(to top, #f91917, #cf0054, #89186b, #40285c, #131d32);
+  flex: 1 1 auto;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
