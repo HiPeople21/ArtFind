@@ -1,4 +1,6 @@
 @import 'navbar.css';
+@import 'register.css';
+@import 'posts.css';
 
 * { 
   box-sizing: border-box;
@@ -22,12 +24,6 @@ h1 {
 }
 
 main {
-  background-image: linear-gradient(to top, #f91917, #cf0054, #89186b, #40285c, #131d32);
+  background-image: black; 
   flex: 1 1 auto;
-}
-
-.register-form {
-  display: flex;
-  flex-direction: column;
-}
-
+} /* linear-gradient(to top, #f91917, #cf0054, #89186b, #40285c, #131d32);*/

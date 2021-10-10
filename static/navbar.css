@@ -9,5 +9,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: red;
+  background: #7FE2D7;
 }
+
+.logo picture img {
+  position: relative;
+  top: 10px;
+}
+

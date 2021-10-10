@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+<article>
+  {% for post in posts %}
+  <div>
+  <h3>{{post.title}}</h3>
+  <p>{{post.user}} {{post.created_at}}</p>
+  {% for art in post.art_set.all %}
+  <img class='post-art' src='/media/{{art.art}}'>
+  {% endfor %}
+  <p>{{post.description}}</p>
+  </div>
+  {% endfor%}
+</article>
+{% endblock %}

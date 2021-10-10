@@ -1,3 +1,12 @@
 {
-  "files": {}
+  "files": {
+    "static/navbar.css": [
+      {
+        "id": "c5af26d7-5a88-4e01-8e4f-fbf5189f3963",
+        "line": 15,
+        "version": 150,
+        "index": 219
+      }
+    ]
+  }
 }
