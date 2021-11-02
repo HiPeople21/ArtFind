@@ -1,10 +1,27 @@
 {% extends 'base.html' %}
 
-{% block title %}Accounts{% endblock %}
+{% block title %}Profile{% endblock %}
 
 {% block content %}
 
 <div>
-  {{user.username}}
+  <h3>{{user.username}}</h3>
+  <div>
+    {% with profile=user.userprofile %}
+    <img src='https://artfind.hipeople21.repl.co/media/{{profile.avatar}}'>
+    <p>{{profile.bio}}</p>
+    <ul>
+      {% for friend_profile in profile.friends.all %}
+      <li>
+      {% with friend=friend_profile.user %}
+      <h3>{{friend.username}}<h3>
+      <img src='https://artfind.hipeople21.repl.co/media/{{friend_profile.avatar}}'>
+      <p>{{friend_profile.bio}}</p>
+      {% endwith %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endwith %}
+  </div>
 </div>
 {% endblock %}

@@ -20,7 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'b#s*_o(3t3ai_k(c5po@h7a=nj5#vjkd3u7ckhnx@)mi=8fn67'
+SECRET_KEY = os.environ['SECRET_KEY']
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -130,5 +131,13 @@ X_FRAME_OPTIONS = '*'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/login'
+
+AUTH_PROFILE_MODULE = 'register.UserProfile'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ['email']
+EMAIL_HOST_PASSWORD = os.environ['email_password']
+
+EMAIL_PORT = 587
